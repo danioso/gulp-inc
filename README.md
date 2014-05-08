@@ -41,6 +41,7 @@ gulp.task('inject', function() {
 - **regex** (optional) RegExp
 - **preproccesor** (optional) function
 
+## License
 
 The MIT License (MIT)
 
