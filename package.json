@@ -1,0 +1,35 @@
+{
+  "name": "gulp-inc",
+  "version": "0.0.1",
+  "description": "Inject file contents with an include tag and compile using your favorite preprocessor like CoffeeScript, Markdown, Sass, etc.",
+  "homepage": "http://github.com/danioso/gulp-inc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danioso/gulp-inc.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "gulp",
+    "gulp-plugin",
+    "file",
+    "include",
+    "file-include",
+    "inject",
+    "inject-content"
+  ],
+  "author": {
+    "name": "Daniel Osorio"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.3.4"
+  },
+  "dependencies": {
+    "gulp-util": "~2.2.10",
+    "event-stream": "~3.1.0"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/danioso/gulp-inc/issues"
+  }
+}
