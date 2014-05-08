@@ -8,7 +8,7 @@ module.exports = function(options) {
 	options = options || {};
 
 	var pluginName = 'gulp-inc',
-		regex = options.regex || /^(.*=\s*(include)\s+([\w\.\/-]+))$/gm,
+		regex = options.regex || /#=\s*include\s+([^\s]+)/gm,
 		preproccesor = options.preproccesor || null;
 
 	if( typeof preproccesor == 'function')
@@ -30,14 +30,14 @@ module.exports = function(options) {
 				matches;
 
 			while (matches = regex.exec(content)) {
-				
-				var match 	= matches[1],
-					path	= file.base + matches[3].replace(/['"]/g, '');
+		
+				var match 	= matches[0],
+					path	= file.base + matches[1].replace(/['"]/g, '');
 
 				if (fs.existsSync(path)) {
 					
 					var contentToInclude = preproccesor(String(fs.readFileSync(path)));
-					result = result.split(match).join(contentToInclude + "\n");
+					result = result.split(match).join("\n" + contentToInclude + "\n");
 					
 				} else
 					throw new PluginError(pluginName, 'File not found: ' + path);
