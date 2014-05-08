@@ -8,10 +8,11 @@ module.exports = function(options) {
 	options = options || {};
 
 	var pluginName = 'gulp-inc',
-		regex = options.regex || /^(.*=\s*(include)\s+([\w\.\/-]+))$/gm;
+		regex = options.regex || /^(.*=\s*(include)\s+([\w\.\/-]+))$/gm,
+		preproccesor = options.preproccesor || null;
 
-	if( typeof options.preproccesor == 'function')
-		preproccesor = options.preproccesor;
+	if( typeof preproccesor == 'function')
+		preproccesor = preproccesor;
 	else
 		preproccesor = function(contents){ return content; }
 
@@ -24,7 +25,7 @@ module.exports = function(options) {
 
 		if (file.isBuffer()) {
 
-			var content = String(file.contents),
+			var content = String(file.contents);
 			var result = content,
 				matches;
 
