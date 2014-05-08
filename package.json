@@ -1,6 +1,6 @@
 {
   "name": "gulp-inc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Inject file contents with an include tag and compile using your favorite preprocessor like CoffeeScript, Markdown, Sass, etc.",
   "homepage": "http://github.com/danioso/gulp-inc",
   "repository": {
@@ -9,6 +9,8 @@
   },
   "main": "index.js",
   "keywords": [
+    "gulpplugin",
+    "gulpfriendly",
     "gulp",
     "gulp-plugin",
     "file",
