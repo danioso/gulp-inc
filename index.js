@@ -14,7 +14,7 @@ module.exports = function(options) {
 	if( typeof preproccesor == 'function')
 		preproccesor = preproccesor;
 	else
-		preproccesor = function(contents){ return content; }
+		preproccesor = function(contents){ return contents; }
 
     function inc(file, callback) {
 
